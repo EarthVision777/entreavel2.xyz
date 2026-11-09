@@ -10,7 +10,7 @@ export async function GET(
   const { id } = await context.params;
   const found = findProduct(id);
   if (!found) return fail(404, "NOT_FOUND", "Archivo no encontrado");
-  const entry = presentModule(auth.user, found.module);
+  const entry = presentModule(found.module);
   if (!entry.hasAccess) {
     return fail(403, "FORBIDDEN", "No tienes acceso a este producto");
   }

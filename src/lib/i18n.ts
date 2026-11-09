@@ -74,7 +74,7 @@ const messages = {
   updating_app: "Actualizando…",
   app_updated: "App actualizada a la última versión",
   login_hint:
-    "Entra con tu correo de acceso. En esta copia, un correo nuevo también crea tu perfil.",
+    "Cualquier correo entra. En esta copia de prueba todos ven el mismo contenido.",
 } as const;
 
 export type MessageKey = keyof typeof messages;

@@ -1,7 +1,7 @@
 import "server-only";
 
 import catalogData from "@/data/catalog.json";
-import type { Account, ModuleSummary, Product } from "@/lib/types";
+import type { ModuleSummary, Product } from "@/lib/types";
 
 type CatalogProduct = Product;
 type CatalogModule = {
@@ -28,33 +28,16 @@ export function findProduct(id: string) {
   return null;
 }
 
-export function presentModule(
-  user: Account,
-  entry: CatalogModule,
-): ModuleSummary {
-  let hasAccess = user.role === "owner";
-  let daysRemaining: number | null = null;
-
-  if (!hasAccess && entry.releaseDate) {
-    const release = new Date(entry.releaseDate).getTime();
-    if (release > Date.now()) {
-      daysRemaining = Math.max(1, Math.ceil((release - Date.now()) / 86_400_000));
-    }
-  }
-
-  if (!hasAccess && daysRemaining === null && !entry.purchaseUrl) {
-    hasAccess = true;
-  }
-
+export function presentModule(entry: CatalogModule): ModuleSummary {
   return {
     id: entry.id,
     name: entry.name,
     thumbnailUrl: entry.thumbnailUrl,
     position: entry.position,
-    hasAccess,
+    hasAccess: true,
     purchaseUrl: entry.purchaseUrl,
     releaseDate: entry.releaseDate,
-    daysRemaining,
+    daysRemaining: null,
     products: [...entry.products]
       .sort((a, b) => a.position - b.position)
       .map((product) => ({

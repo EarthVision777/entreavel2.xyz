@@ -9,13 +9,7 @@ import {
   useState,
 } from "react";
 import { Toaster, toast } from "sonner";
-import {
-  api,
-  clearSession,
-  readSession,
-  writeSession,
-  type Session,
-} from "@/lib/api";
+import { api } from "@/lib/api";
 import { appConfig } from "@/lib/config";
 import type { SessionUser } from "@/lib/types";
 
@@ -41,15 +35,27 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    let active = true;
     try {
       const stored = localStorage.getItem(themeKey);
       if (stored === "dark" || stored === "light") setTheme(stored);
-      setUserState(readSession()?.user ?? null);
     } catch {
-      setUserState(null);
-    } finally {
-      setLoading(false);
+      // Theme stays on the default when storage is blocked.
     }
+    api
+      .me()
+      .then((user) => {
+        if (active) setUserState(user);
+      })
+      .catch(() => {
+        if (active) setUserState(null);
+      })
+      .finally(() => {
+        if (active) setLoading(false);
+      });
+    return () => {
+      active = false;
+    };
   }, []);
 
   useEffect(() => {
@@ -64,19 +70,19 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   const login = useCallback(async (email: string) => {
-    const session: Session = await api.login(email);
-    writeSession(session);
-    setUserState(session.user);
+    setUserState(await api.login(email));
   }, []);
 
-  const logout = useCallback(() => {
-    clearSession();
+  const logout = useCallback(async () => {
+    try {
+      await api.logout();
+    } catch {
+      // Clearing the screen still returns the visitor to the email form.
+    }
     setUserState(null);
   }, []);
 
   const setUser = useCallback((next: SessionUser) => {
-    const session = readSession();
-    if (session) writeSession({ ...session, user: next });
     setUserState(next);
   }, []);
 

@@ -44,14 +44,6 @@ create table feed_posts (
 create index posts_created_at_idx on posts (created_at desc);
 create index comments_post_idx on comments (post_id, created_at desc);
 
-insert into users (id, name, email, role)
-values (
-  '6e38918c-3683-499d-b7e7-a608f2240e24',
-  'Marco Almeida da Silva Terra',
-  'desert.quest147@gmail.com',
-  'owner'
-);
-
 insert into feed_posts (id, content, created_at) values
 (
   'feed-bienvenida',

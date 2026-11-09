@@ -26,5 +26,3 @@ export const appConfig = {
     },
   ],
 };
-
-export const ownerEmail = "desert.quest147@gmail.com";

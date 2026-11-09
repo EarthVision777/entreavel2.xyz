@@ -7,6 +7,6 @@ export async function GET(request: Request) {
   const modules = listCatalog()
     .slice()
     .sort((a, b) => a.position - b.position)
-    .map((module) => presentModule(auth.user, module));
+    .map((module) => presentModule(module));
   return ok(modules);
 }

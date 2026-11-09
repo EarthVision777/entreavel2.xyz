@@ -1,14 +1,16 @@
 # Llama eterna
 
-Área de membros do **Llama eterna** (Reconquista Seu Amor): login por e-mail, módulos, aulas, feed de atualizações, comunidade e perfil.
+Área de membros do **Llama eterna**: módulos, aulas, feed, comunidade e perfil.
 
-Esta cópia usa o catálogo e as capas originais. As aulas continuam nas páginas em que já estavam publicadas e abrem dentro do app.
+As aulas continuam nas páginas originais e abrem dentro do app. Qualquer e-mail válido entra, e todo mundo vê o mesmo conteúdo. O e-mail só identifica o perfil de quem já está autenticado; não libera a conta de outra pessoa.
 
 ## Como entrar
 
 1. Abra o app.
-2. Use o e-mail de acesso `desert.quest147@gmail.com` para ver todos os módulos.
-3. Qualquer outro e-mail válido cria um perfil de aluna. Os módulos pagos (ritual pessoal e carta canalizada) ficam bloqueados e levam ao checkout.
+2. Digite qualquer e-mail válido.
+3. Os módulos, o feed e a comunidade abrem em seguida.
+
+No app publicado, quem entra é a pessoa autenticada no Cursor. Neste computador, o servidor simula um visitante de teste (`dev@example.com`) para as telas funcionarem sem essa autenticação.
 
 ## Rodar localmente
 

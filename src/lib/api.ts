@@ -19,35 +19,8 @@ export class ApiError extends Error {
   }
 }
 
-const sessionKey = "llama.session";
-
-export type Session = {
-  token: string;
-  user: SessionUser;
-};
-
-export function readSession(): Session | null {
-  if (typeof window === "undefined") return null;
-  try {
-    const raw = window.localStorage.getItem(sessionKey);
-    return raw ? (JSON.parse(raw) as Session) : null;
-  } catch {
-    return null;
-  }
-}
-
-export function writeSession(session: Session) {
-  window.localStorage.setItem(sessionKey, JSON.stringify(session));
-}
-
-export function clearSession() {
-  window.localStorage.removeItem(sessionKey);
-}
-
 async function request<T>(path: string, init: RequestInit = {}): Promise<T> {
   const headers = new Headers(init.headers);
-  const token = readSession()?.token;
-  if (token) headers.set("Authorization", `Bearer ${token}`);
   if (init.body && !headers.has("Content-Type")) {
     headers.set("Content-Type", "application/json");
   }
@@ -71,10 +44,12 @@ async function request<T>(path: string, init: RequestInit = {}): Promise<T> {
 
 export const api = {
   login: (email: string) =>
-    request<Session>("/auth/login", {
+    request<SessionUser>("/auth/login", {
       method: "POST",
       body: JSON.stringify({ email }),
     }),
+  me: () => request<SessionUser>("/me"),
+  logout: () => request<null>("/me", { method: "DELETE" }),
   updateName: (name: string) =>
     request<SessionUser>("/me", {
       method: "PATCH",

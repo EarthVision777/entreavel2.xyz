@@ -4,10 +4,6 @@ export type SessionUser = {
   email: string;
 };
 
-export type Account = SessionUser & {
-  role: "owner" | "member";
-};
-
 export type ProductType =
   | "external_link"
   | "link"
