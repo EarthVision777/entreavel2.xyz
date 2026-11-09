@@ -1,0 +1,23 @@
+{
+  "id": "/",
+  "name": "Llama eterna",
+  "short_name": "Llama eterna",
+  "scope": "/",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#111827",
+  "theme_color": "#8a1500",
+  "icons": [
+    {
+      "src": "https://uigbpgrkzspdaisrdjvz.supabase.co/storage/v1/object/public/llama-assets/brand/logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://uigbpgrkzspdaisrdjvz.supabase.co/storage/v1/object/public/llama-assets/brand/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

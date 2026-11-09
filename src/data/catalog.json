@@ -1,0 +1,454 @@
+[
+  {
+    "id": "0e594af4-a267-4890-a48d-1a066bf658cd",
+    "name": "Módulo 01 - Presentación",
+    "thumbnailUrl": "https://uigbpgrkzspdaisrdjvz.supabase.co/storage/v1/object/public/llama-assets/modules/modulo-01-presentacion.png",
+    "position": 1,
+    "purchaseUrl": null,
+    "releaseDate": null,
+    "products": [
+      {
+        "id": "571da788-c26a-4bf9-9136-4f9868e148cb",
+        "moduleId": "0e594af4-a267-4890-a48d-1a066bf658cd",
+        "name": "Bienvenida",
+        "thumbnailUrl": "https://uigbpgrkzspdaisrdjvz.supabase.co/storage/v1/object/public/llama-assets/products/modulo-01-presentacion/bienvenida.png",
+        "type": "link",
+        "position": 0,
+        "description": "",
+        "contentUrl": "https://modulo-1-23fgaow.gamma.site/",
+        "htmlContent": ""
+      }
+    ]
+  },
+  {
+    "id": "77a97bdf-db67-49f2-a1e0-38c5d6ff5c2a",
+    "name": "Módulo 02 - Preparación",
+    "thumbnailUrl": "https://uigbpgrkzspdaisrdjvz.supabase.co/storage/v1/object/public/llama-assets/modules/modulo-02-preparacion.png",
+    "position": 2,
+    "purchaseUrl": null,
+    "releaseDate": null,
+    "products": [
+      {
+        "id": "b279f110-7e5c-454f-9a76-f1469e505373",
+        "moduleId": "77a97bdf-db67-49f2-a1e0-38c5d6ff5c2a",
+        "name": "Introdución",
+        "thumbnailUrl": "https://uigbpgrkzspdaisrdjvz.supabase.co/storage/v1/object/public/llama-assets/products/modulo-02-preparacion/introducion.png",
+        "type": "link",
+        "position": 0,
+        "description": "",
+        "contentUrl": "https://modulo-2-introducao-2ndwk29.gamma.site/",
+        "htmlContent": ""
+      },
+      {
+        "id": "9f0e3134-e637-4335-a3ef-5ab3e46a08d2",
+        "moduleId": "77a97bdf-db67-49f2-a1e0-38c5d6ff5c2a",
+        "name": "Ansiedad",
+        "thumbnailUrl": "https://uigbpgrkzspdaisrdjvz.supabase.co/storage/v1/object/public/llama-assets/products/modulo-02-preparacion/ansiedad.png",
+        "type": "link",
+        "position": 1,
+        "description": "",
+        "contentUrl": "https://modulo-02-aula-01-xfz2les.gamma.site/",
+        "htmlContent": ""
+      },
+      {
+        "id": "39f978f1-8080-4a42-b49b-3f0ce5ad4f12",
+        "moduleId": "77a97bdf-db67-49f2-a1e0-38c5d6ff5c2a",
+        "name": "El error que el 90% de las personas comete",
+        "thumbnailUrl": "https://uigbpgrkzspdaisrdjvz.supabase.co/storage/v1/object/public/llama-assets/products/modulo-02-preparacion/el-error-que-el-90-de-las-personas-comete.png",
+        "type": "link",
+        "position": 2,
+        "description": "",
+        "contentUrl": "https://modulo-02-aula-02-o4915xi.gamma.site/",
+        "htmlContent": ""
+      },
+      {
+        "id": "b4d6e060-e177-4321-9d8b-e7de2bfa506c",
+        "moduleId": "77a97bdf-db67-49f2-a1e0-38c5d6ff5c2a",
+        "name": "Cómo saber si estás lista para el ritual",
+        "thumbnailUrl": "https://uigbpgrkzspdaisrdjvz.supabase.co/storage/v1/object/public/llama-assets/products/modulo-02-preparacion/como-saber-si-estas-lista-para-el-ritual.png",
+        "type": "link",
+        "position": 3,
+        "description": "",
+        "contentUrl": "https://modulo-02-aula-03-x9w511c.gamma.site/",
+        "htmlContent": ""
+      }
+    ]
+  },
+  {
+    "id": "79b4bba8-e9b3-4d04-bec0-419b3232efdd",
+    "name": "Módulo 03 - El ritual",
+    "thumbnailUrl": "https://uigbpgrkzspdaisrdjvz.supabase.co/storage/v1/object/public/llama-assets/modules/modulo-03-el-ritual.png",
+    "position": 3,
+    "purchaseUrl": null,
+    "releaseDate": null,
+    "products": [
+      {
+        "id": "08acb11f-27bb-408d-b535-cdb94664170e",
+        "moduleId": "79b4bba8-e9b3-4d04-bec0-419b3232efdd",
+        "name": "Introdución",
+        "thumbnailUrl": "https://uigbpgrkzspdaisrdjvz.supabase.co/storage/v1/object/public/llama-assets/products/modulo-03-el-ritual/introducion.png",
+        "type": "link",
+        "position": 0,
+        "description": "",
+        "contentUrl": "https://modulo-03-introducao-bk14dpw.gamma.site/",
+        "htmlContent": ""
+      },
+      {
+        "id": "59adf3ed-bbf5-4a97-9172-180bb2641043",
+        "moduleId": "79b4bba8-e9b3-4d04-bec0-419b3232efdd",
+        "name": "Qué hace este ritual",
+        "thumbnailUrl": "https://uigbpgrkzspdaisrdjvz.supabase.co/storage/v1/object/public/llama-assets/products/modulo-03-el-ritual/que-hace-este-ritual.png",
+        "type": "link",
+        "position": 1,
+        "description": "",
+        "contentUrl": "https://modulo-03-aula-01-onu7660.gamma.site/",
+        "htmlContent": ""
+      },
+      {
+        "id": "f8bbe974-78a0-4e09-a207-68d2bed6b026",
+        "moduleId": "79b4bba8-e9b3-4d04-bec0-419b3232efdd",
+        "name": "Preparación práctica",
+        "thumbnailUrl": "https://uigbpgrkzspdaisrdjvz.supabase.co/storage/v1/object/public/llama-assets/products/modulo-03-el-ritual/preparacion-practica.png",
+        "type": "link",
+        "position": 2,
+        "description": "",
+        "contentUrl": "https://modulo-03-aula-02-dfki8ff.gamma.site/",
+        "htmlContent": ""
+      },
+      {
+        "id": "1c265900-58b4-4829-aff4-032824c6677a",
+        "moduleId": "79b4bba8-e9b3-4d04-bec0-419b3232efdd",
+        "name": "El paso a paso",
+        "thumbnailUrl": "https://uigbpgrkzspdaisrdjvz.supabase.co/storage/v1/object/public/llama-assets/products/modulo-03-el-ritual/el-paso-a-paso.png",
+        "type": "link",
+        "position": 3,
+        "description": "",
+        "contentUrl": "https://modulo-03-aula-03-1bp5exu.gamma.site/",
+        "htmlContent": ""
+      },
+      {
+        "id": "f5803be8-97e6-4855-94ee-f5d829eb05f0",
+        "moduleId": "79b4bba8-e9b3-4d04-bec0-419b3232efdd",
+        "name": "El momento adecuado",
+        "thumbnailUrl": "https://uigbpgrkzspdaisrdjvz.supabase.co/storage/v1/object/public/llama-assets/products/modulo-03-el-ritual/el-momento-adecuado.png",
+        "type": "link",
+        "position": 4,
+        "description": "",
+        "contentUrl": "https://modulo-03-aula-04-mlh5ga3.gamma.site/",
+        "htmlContent": ""
+      },
+      {
+        "id": "c1631d1d-fb0a-4e90-8126-2a63611da343",
+        "moduleId": "79b4bba8-e9b3-4d04-bec0-419b3232efdd",
+        "name": "después del ritual",
+        "thumbnailUrl": "https://uigbpgrkzspdaisrdjvz.supabase.co/storage/v1/object/public/llama-assets/products/modulo-03-el-ritual/despues-del-ritual.png",
+        "type": "link",
+        "position": 5,
+        "description": "",
+        "contentUrl": "https://modulo-03-aula-05-kvm71se.gamma.site/",
+        "htmlContent": ""
+      }
+    ]
+  },
+  {
+    "id": "676e5e6a-cba2-4100-844a-7230d10f1277",
+    "name": "Módulo 04 - Activación",
+    "thumbnailUrl": "https://uigbpgrkzspdaisrdjvz.supabase.co/storage/v1/object/public/llama-assets/modules/modulo-04-activacion.png",
+    "position": 4,
+    "purchaseUrl": null,
+    "releaseDate": null,
+    "products": [
+      {
+        "id": "542ae9d1-cf16-496f-9863-74f65f0c0a89",
+        "moduleId": "676e5e6a-cba2-4100-844a-7230d10f1277",
+        "name": "Activación Conductual",
+        "thumbnailUrl": "https://uigbpgrkzspdaisrdjvz.supabase.co/storage/v1/object/public/llama-assets/products/modulo-04-activacion/activacion-conductual.png",
+        "type": "link",
+        "position": 0,
+        "description": "",
+        "contentUrl": "https://modulo-04-introducao-ud1opt0.gamma.site/",
+        "htmlContent": ""
+      },
+      {
+        "id": "d233f453-52a4-47bb-923b-addb191d6490",
+        "moduleId": "676e5e6a-cba2-4100-844a-7230d10f1277",
+        "name": "El comportamiento",
+        "thumbnailUrl": "https://uigbpgrkzspdaisrdjvz.supabase.co/storage/v1/object/public/llama-assets/products/modulo-04-activacion/el-comportamiento.png",
+        "type": "link",
+        "position": 1,
+        "description": "",
+        "contentUrl": "https://modulo-04-aula-01-8fa975j.gamma.site/",
+        "htmlContent": ""
+      },
+      {
+        "id": "a67f2988-3e9b-49c2-b062-7beda8d980fe",
+        "moduleId": "676e5e6a-cba2-4100-844a-7230d10f1277",
+        "name": "5 comportamientos",
+        "thumbnailUrl": "https://uigbpgrkzspdaisrdjvz.supabase.co/storage/v1/object/public/llama-assets/products/modulo-04-activacion/5-comportamientos.png",
+        "type": "link",
+        "position": 2,
+        "description": "",
+        "contentUrl": "https://modulo-04-aula-02-6hq5elk.gamma.site/",
+        "htmlContent": ""
+      },
+      {
+        "id": "0d397c3a-6901-4c19-b6e4-67660da80d3e",
+        "moduleId": "676e5e6a-cba2-4100-844a-7230d10f1277",
+        "name": "El comportamiento correcto",
+        "thumbnailUrl": "https://uigbpgrkzspdaisrdjvz.supabase.co/storage/v1/object/public/llama-assets/products/modulo-04-activacion/el-comportamiento-correcto.png",
+        "type": "link",
+        "position": 3,
+        "description": "",
+        "contentUrl": "https://modulo-04-aula-03-iyqvdus.gamma.site/",
+        "htmlContent": ""
+      },
+      {
+        "id": "37491438-7b7b-49d0-a075-44e3c0514810",
+        "moduleId": "676e5e6a-cba2-4100-844a-7230d10f1277",
+        "name": "Contacto Consciente",
+        "thumbnailUrl": "https://uigbpgrkzspdaisrdjvz.supabase.co/storage/v1/object/public/llama-assets/products/modulo-04-activacion/contacto-consciente.png",
+        "type": "link",
+        "position": 4,
+        "description": "",
+        "contentUrl": "https://modulo-04-aula-04-8umi9ir.gamma.site/",
+        "htmlContent": ""
+      },
+      {
+        "id": "289f01bb-da80-4519-bcc5-ce3d5c773ed6",
+        "moduleId": "676e5e6a-cba2-4100-844a-7230d10f1277",
+        "name": "El silencio estratégico",
+        "thumbnailUrl": "https://uigbpgrkzspdaisrdjvz.supabase.co/storage/v1/object/public/llama-assets/products/modulo-04-activacion/el-silencio-estrategico.png",
+        "type": "link",
+        "position": 5,
+        "description": "",
+        "contentUrl": "https://modulo-04-aula-05-73n0emr.gamma.site/",
+        "htmlContent": ""
+      },
+      {
+        "id": "c6147629-4097-4d02-89b6-405d1630bb79",
+        "moduleId": "676e5e6a-cba2-4100-844a-7230d10f1277",
+        "name": "Cómo actuar",
+        "thumbnailUrl": "https://uigbpgrkzspdaisrdjvz.supabase.co/storage/v1/object/public/llama-assets/products/modulo-04-activacion/como-actuar.png",
+        "type": "link",
+        "position": 6,
+        "description": "",
+        "contentUrl": "https://modulo-04-aula-06-q1cq7bd.gamma.site/",
+        "htmlContent": ""
+      },
+      {
+        "id": "9ecb8b26-ba74-46f5-962b-c6701867699a",
+        "moduleId": "676e5e6a-cba2-4100-844a-7230d10f1277",
+        "name": "Reprogramación de Postura",
+        "thumbnailUrl": "https://uigbpgrkzspdaisrdjvz.supabase.co/storage/v1/object/public/llama-assets/products/modulo-04-activacion/reprogramacion-de-postura.png",
+        "type": "link",
+        "position": 7,
+        "description": "",
+        "contentUrl": "https://modulo-04-aula-07-8h5g1dt.gamma.site/",
+        "htmlContent": ""
+      }
+    ]
+  },
+  {
+    "id": "e890ea7f-80d4-4a0f-8644-72d8dd037375",
+    "name": "Módulo 05 - Senales",
+    "thumbnailUrl": "https://uigbpgrkzspdaisrdjvz.supabase.co/storage/v1/object/public/llama-assets/modules/modulo-05-senales.png",
+    "position": 5,
+    "purchaseUrl": null,
+    "releaseDate": null,
+    "products": [
+      {
+        "id": "efa57865-2b34-44ee-bed0-e546c7b785bd",
+        "moduleId": "e890ea7f-80d4-4a0f-8644-72d8dd037375",
+        "name": "Sincronicidades",
+        "thumbnailUrl": "https://uigbpgrkzspdaisrdjvz.supabase.co/storage/v1/object/public/llama-assets/products/modulo-05-senales/sincronicidades.png",
+        "type": "link",
+        "position": 0,
+        "description": "",
+        "contentUrl": "https://modulo-05-introducao-8d0pkni.gamma.site/",
+        "htmlContent": ""
+      },
+      {
+        "id": "73018fbc-a798-4087-b3a8-f0f451300995",
+        "moduleId": "e890ea7f-80d4-4a0f-8644-72d8dd037375",
+        "name": "Resultados",
+        "thumbnailUrl": "https://uigbpgrkzspdaisrdjvz.supabase.co/storage/v1/object/public/llama-assets/products/modulo-05-senales/resultados.png",
+        "type": "link",
+        "position": 1,
+        "description": "",
+        "contentUrl": "https://modulo-05-aula-01-58apxcu.gamma.site/",
+        "htmlContent": ""
+      },
+      {
+        "id": "96a00ca4-1b62-4feb-a236-074ac01d1b6d",
+        "moduleId": "e890ea7f-80d4-4a0f-8644-72d8dd037375",
+        "name": "Señales reales",
+        "thumbnailUrl": "https://uigbpgrkzspdaisrdjvz.supabase.co/storage/v1/object/public/llama-assets/products/modulo-05-senales/senales-reales.png",
+        "type": "link",
+        "position": 2,
+        "description": "",
+        "contentUrl": "https://modulo-05-aula-02-uis0o04.gamma.site/",
+        "htmlContent": ""
+      },
+      {
+        "id": "4046d062-8a72-40a3-a9c9-f813e29be36f",
+        "moduleId": "e890ea7f-80d4-4a0f-8644-72d8dd037375",
+        "name": "3 fases naturales",
+        "thumbnailUrl": "https://uigbpgrkzspdaisrdjvz.supabase.co/storage/v1/object/public/llama-assets/products/modulo-05-senales/3-fases-naturales.png",
+        "type": "link",
+        "position": 3,
+        "description": "",
+        "contentUrl": "https://modulo-05-aula-03-awcv9gt.gamma.site/",
+        "htmlContent": ""
+      },
+      {
+        "id": "02f264da-6e6e-46f5-a183-f6b27b03aad7",
+        "moduleId": "e890ea7f-80d4-4a0f-8644-72d8dd037375",
+        "name": "El silencio",
+        "thumbnailUrl": "https://uigbpgrkzspdaisrdjvz.supabase.co/storage/v1/object/public/llama-assets/products/modulo-05-senales/el-silencio.png",
+        "type": "link",
+        "position": 4,
+        "description": "",
+        "contentUrl": "https://modulo-05-aula-04-voly4ho.gamma.site/",
+        "htmlContent": ""
+      },
+      {
+        "id": "1ca630b3-56da-4d05-9f87-808f38a402b8",
+        "moduleId": "e890ea7f-80d4-4a0f-8644-72d8dd037375",
+        "name": "No está funcionando?",
+        "thumbnailUrl": "https://uigbpgrkzspdaisrdjvz.supabase.co/storage/v1/object/public/llama-assets/products/modulo-05-senales/no-esta-funcionando.png",
+        "type": "link",
+        "position": 5,
+        "description": "",
+        "contentUrl": "https://modulo-05-aula-05-4zmo5us.gamma.site/",
+        "htmlContent": ""
+      },
+      {
+        "id": "58218296-034c-41db-842f-25d06ba96f55",
+        "moduleId": "e890ea7f-80d4-4a0f-8644-72d8dd037375",
+        "name": "Observación",
+        "thumbnailUrl": "https://uigbpgrkzspdaisrdjvz.supabase.co/storage/v1/object/public/llama-assets/products/modulo-05-senales/observacion.png",
+        "type": "link",
+        "position": 6,
+        "description": "",
+        "contentUrl": "https://6-ejercicio-clave-observ-ifvxe3s.gamma.site/",
+        "htmlContent": ""
+      }
+    ]
+  },
+  {
+    "id": "562e3070-efc7-45da-bdaa-508425c19576",
+    "name": "BONUS 01",
+    "thumbnailUrl": "https://uigbpgrkzspdaisrdjvz.supabase.co/storage/v1/object/public/llama-assets/modules/bonus-01.png",
+    "position": 6,
+    "purchaseUrl": null,
+    "releaseDate": null,
+    "products": [
+      {
+        "id": "1ad52dc4-f7fd-4b86-b1fa-f7480e8e0bbb",
+        "moduleId": "562e3070-efc7-45da-bdaa-508425c19576",
+        "name": "Banhos Magnéticos de Atração y Reconexión",
+        "thumbnailUrl": "https://uigbpgrkzspdaisrdjvz.supabase.co/storage/v1/object/public/llama-assets/products/bonus-01/banhos-magneticos-de-atracao-y-reconexion.png",
+        "type": "link",
+        "position": 0,
+        "description": "",
+        "contentUrl": "https://bonus-1-5y1uss4.gamma.site/",
+        "htmlContent": ""
+      }
+    ]
+  },
+  {
+    "id": "c25bf9e4-7150-4c8f-839c-9fc1b6b987eb",
+    "name": "BONUS 02",
+    "thumbnailUrl": "https://uigbpgrkzspdaisrdjvz.supabase.co/storage/v1/object/public/llama-assets/modules/bonus-02.png",
+    "position": 7,
+    "purchaseUrl": null,
+    "releaseDate": null,
+    "products": [
+      {
+        "id": "7095e186-a391-404a-8991-14cba9412d9f",
+        "moduleId": "c25bf9e4-7150-4c8f-839c-9fc1b6b987eb",
+        "name": "Ritual de Protección",
+        "thumbnailUrl": "https://uigbpgrkzspdaisrdjvz.supabase.co/storage/v1/object/public/llama-assets/products/bonus-02/ritual-de-proteccion.png",
+        "type": "link",
+        "position": 0,
+        "description": "",
+        "contentUrl": "https://bonus-2-6fk8qah.gamma.site/",
+        "htmlContent": ""
+      }
+    ]
+  },
+  {
+    "id": "da2f02a0-dcfe-4f1c-bfad-4b3edc0d7459",
+    "name": "BONUS 03",
+    "thumbnailUrl": "https://uigbpgrkzspdaisrdjvz.supabase.co/storage/v1/object/public/llama-assets/modules/bonus-03.png",
+    "position": 8,
+    "purchaseUrl": null,
+    "releaseDate": "2026-08-02T02:56:22.822Z",
+    "products": [
+      {
+        "id": "adfa9d73-8f32-46eb-b0f5-e230d50e8960",
+        "moduleId": "da2f02a0-dcfe-4f1c-bfad-4b3edc0d7459",
+        "name": "Como Aparecer nos Sonhos Dele",
+        "thumbnailUrl": "https://uigbpgrkzspdaisrdjvz.supabase.co/storage/v1/object/public/llama-assets/products/bonus-03/como-aparecer-nos-sonhos-dele.png",
+        "type": "link",
+        "position": 0,
+        "description": "",
+        "contentUrl": "https://bonus-3-8z4hxb8.gamma.site/",
+        "htmlContent": ""
+      }
+    ]
+  },
+  {
+    "id": "1c96b825-5615-49f7-a1e3-2fdef00b2ff4",
+    "name": "Hecho Por Rosa",
+    "thumbnailUrl": "https://uigbpgrkzspdaisrdjvz.supabase.co/storage/v1/object/public/llama-assets/modules/hecho-por-rosa.png",
+    "position": 10,
+    "purchaseUrl": "https://pay.hotmart.com/S108101306H?off=5od94w64",
+    "releaseDate": null,
+    "products": [
+      {
+        "id": "fc52b04b-6f9f-4405-869d-2dcc41c06dec",
+        "moduleId": "1c96b825-5615-49f7-a1e3-2fdef00b2ff4",
+        "name": "Solicita tu ritual",
+        "thumbnailUrl": "https://uigbpgrkzspdaisrdjvz.supabase.co/storage/v1/object/public/llama-assets/products/hecho-por-rosa/solicita-tu-ritual.png",
+        "type": "external_link",
+        "position": 0,
+        "description": "",
+        "contentUrl": "https://miembros.reconquistasuamor.com/",
+        "htmlContent": ""
+      }
+    ]
+  },
+  {
+    "id": "f7db8ee5-2755-4605-8489-009545cd8b54",
+    "name": "Carta Canalizada",
+    "thumbnailUrl": "https://uigbpgrkzspdaisrdjvz.supabase.co/storage/v1/object/public/llama-assets/modules/carta-canalizada.png",
+    "position": 11,
+    "purchaseUrl": "https://pay.hotmart.com/D108101243V?off=wyvoxpn7",
+    "releaseDate": null,
+    "products": [
+      {
+        "id": "808f3f46-e342-462d-8371-ff3154b1db39",
+        "moduleId": "f7db8ee5-2755-4605-8489-009545cd8b54",
+        "name": "Reciba su carta canalizada",
+        "thumbnailUrl": "https://uigbpgrkzspdaisrdjvz.supabase.co/storage/v1/object/public/llama-assets/products/carta-canalizada/reciba-su-carta-canalizada.png",
+        "type": "external_link",
+        "position": 0,
+        "description": "",
+        "contentUrl": "https://miembros.reconquistasuamor.com/",
+        "htmlContent": ""
+      },
+      {
+        "id": "56a26710-6aa7-4797-acc1-373050a41045",
+        "moduleId": "f7db8ee5-2755-4605-8489-009545cd8b54",
+        "name": "EN BREVE - 12 Señales que anuncian el regreso",
+        "thumbnailUrl": "https://uigbpgrkzspdaisrdjvz.supabase.co/storage/v1/object/public/llama-assets/products/carta-canalizada/en-breve-12-senales-que-anuncian-el-regreso.png",
+        "type": "html",
+        "position": 1,
+        "description": "",
+        "contentUrl": "",
+        "htmlContent": "<div></div>"
+      }
+    ]
+  }
+]
