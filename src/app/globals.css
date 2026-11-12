@@ -193,6 +193,11 @@ body {
   color: #9ca3af;
 }
 
+.lesson-reading {
+  font-family: var(--font-serif), Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+  text-wrap: pretty;
+}
+
 .community-content a {
   color: #3b82f6;
   text-decoration: underline;

@@ -1,11 +1,16 @@
 import type { Metadata, Viewport } from "next";
-import { Geist } from "next/font/google";
+import { Geist, Source_Serif_4 } from "next/font/google";
 import { AppProvider } from "@/components/app-provider";
 import { appConfig } from "@/lib/config";
 import "./globals.css";
 
 const geist = Geist({
   variable: "--font-sans",
+  subsets: ["latin"],
+});
+
+const sourceSerif = Source_Serif_4({
+  variable: "--font-serif",
   subsets: ["latin"],
 });
 
@@ -39,7 +44,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" data-theme="dark" className={`dark-theme ${geist.variable}`}>
+    <html lang="es" data-theme="dark" className={`dark-theme ${geist.variable} ${sourceSerif.variable}`}>
       <body className="antialiased">
         <AppProvider>{children}</AppProvider>
       </body>

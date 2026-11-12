@@ -53,7 +53,7 @@ export function releaseMessage(module: {
   if (module.releaseDate) {
     const date = new Date(module.releaseDate);
     if (date.getTime() > Date.now()) {
-      return `Este producto estará disponible el ${date.toLocaleDateString("pt-BR", { day: "2-digit", month: "2-digit", year: "numeric" })}`;
+      return `Este producto estará disponible el ${date.toLocaleDateString("es", { day: "numeric", month: "long", year: "numeric" })}`;
     }
   }
   return null;

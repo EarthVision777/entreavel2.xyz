@@ -1,6 +1,6 @@
 export const appConfig = {
   name: "Llama eterna",
-  description: "Sua plataforma de conteúdo",
+  description: "Tu espacio de la Llama eterna",
   theme: "dark" as const,
   logoUrl:
     "https://uigbpgrkzspdaisrdjvz.supabase.co/storage/v1/object/public/llama-assets/brand/logo.png",

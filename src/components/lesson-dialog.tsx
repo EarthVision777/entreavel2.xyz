@@ -1,8 +1,11 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { Dialog } from "@base-ui/react/dialog";
 import { X } from "lucide-react";
+import { LessonReading } from "@/components/lesson-reading";
 import { Button } from "@/components/ui/button";
+import { guideFor } from "@/data/guides";
 import { t } from "@/lib/i18n";
 import { openExternal, vimeoEmbed, youtubeId } from "@/lib/media";
 import type { Product } from "@/lib/types";
@@ -50,24 +53,93 @@ export function LessonDialog({
 }
 
 function LessonBody({ product, dark }: { product: Product; dark: boolean }) {
+  const guide = guideFor(product.id);
+  const original = hasOriginalClass(product);
+  const [tab, setTab] = useState<"guide" | "class">(guide ? "guide" : "class");
+
+  useEffect(() => {
+    setTab(guideFor(product.id) ? "guide" : "class");
+  }, [product.id]);
+
   const frame = "w-full rounded-lg bg-black";
   return (
-    <div className="flex flex-col gap-4 p-4">
-      <Player product={product} frame={frame} />
+    <div className="mx-auto flex w-full max-w-3xl flex-col gap-4 p-4 pb-16">
+      {guide && original ? (
+        <div
+          role="tablist"
+          aria-label={product.name}
+          className="mx-auto grid w-full max-w-xl grid-cols-2 gap-1 rounded-full bg-black/40 p-1"
+        >
+          <TabButton
+            selected={tab === "guide"}
+            onClick={() => setTab("guide")}
+          >
+            {t("reading_tab")}
+          </TabButton>
+          <TabButton
+            selected={tab === "class"}
+            onClick={() => setTab("class")}
+          >
+            {t("original_class")}
+          </TabButton>
+        </div>
+      ) : null}
+      {tab === "guide" && guide ? (
+        <LessonReading guide={guide} />
+      ) : (
+        <Player product={product} frame={frame} />
+      )}
+      {product.type === "external_link" && tab === "guide" ? (
+        <div className="mx-auto flex w-full max-w-xl justify-center">
+          <Button
+            className="h-auto bg-[#8a1500] px-8 py-3 text-base text-white hover:bg-[#6e1000]"
+            onClick={() => openExternal(product.contentUrl)}
+          >
+            {t("open_access")}
+          </Button>
+        </div>
+      ) : null}
       {product.description ? (
         <div
-          className={`rounded-lg p-4 ${dark ? "bg-gray-800 text-gray-300" : "bg-gray-50 text-gray-600"}`}
+          className={`mx-auto w-full max-w-xl rounded-lg p-4 ${dark ? "bg-gray-800 text-gray-300" : "bg-gray-50 text-gray-600"}`}
         >
-          <h3 className="mb-2 text-lg font-semibold">{t("description")}</h3>
+          <h3 className="mb-2 font-sans text-lg font-semibold">{t("description")}</h3>
           <p className="whitespace-pre-wrap">{product.description}</p>
-          <p className="mt-4 text-sm">
-            {t("last_updated")}{" "}
-            {new Date().toLocaleDateString("pt-BR")}
-          </p>
         </div>
       ) : null}
     </div>
   );
+}
+
+function TabButton({
+  selected,
+  onClick,
+  children,
+}: {
+  selected: boolean;
+  onClick: () => void;
+  children: string;
+}) {
+  return (
+    <button
+      type="button"
+      role="tab"
+      aria-selected={selected}
+      onClick={onClick}
+      className={`rounded-full px-3 py-2 text-sm font-medium focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#e7b5a6] ${selected ? "bg-[#8a1500] text-white" : "text-stone-300 hover:text-white"}`}
+    >
+      {children}
+    </button>
+  );
+}
+
+function hasOriginalClass(product: Product) {
+  if (product.type === "external_link") return false;
+  if (product.type === "html") {
+    const html = product.htmlContent.trim();
+    return Boolean(html) && html !== "<div></div>";
+  }
+  return Boolean(product.contentUrl);
 }
 
 function Player({ product, frame }: { product: Product; frame: string }) {
@@ -77,10 +149,10 @@ function Player({ product, frame }: { product: Product; frame: string }) {
     return (
       <div className="flex justify-center py-10">
         <Button
-          className="h-auto bg-black px-8 py-3 text-base text-white hover:bg-gray-800"
+          className="h-auto bg-[#8a1500] px-8 py-3 text-base text-white hover:bg-[#6e1000]"
           onClick={() => openExternal(url)}
         >
-          Acessar Conteúdo
+          {t("open_access")}
         </Button>
       </div>
     );

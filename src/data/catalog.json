@@ -31,7 +31,7 @@
       {
         "id": "b279f110-7e5c-454f-9a76-f1469e505373",
         "moduleId": "77a97bdf-db67-49f2-a1e0-38c5d6ff5c2a",
-        "name": "Introdución",
+        "name": "Introducción",
         "thumbnailUrl": "https://uigbpgrkzspdaisrdjvz.supabase.co/storage/v1/object/public/llama-assets/products/modulo-02-preparacion/introducion.png",
         "type": "link",
         "position": 0,
@@ -85,7 +85,7 @@
       {
         "id": "08acb11f-27bb-408d-b535-cdb94664170e",
         "moduleId": "79b4bba8-e9b3-4d04-bec0-419b3232efdd",
-        "name": "Introdución",
+        "name": "Introducción",
         "thumbnailUrl": "https://uigbpgrkzspdaisrdjvz.supabase.co/storage/v1/object/public/llama-assets/products/modulo-03-el-ritual/introducion.png",
         "type": "link",
         "position": 0,
@@ -140,7 +140,7 @@
       {
         "id": "c1631d1d-fb0a-4e90-8126-2a63611da343",
         "moduleId": "79b4bba8-e9b3-4d04-bec0-419b3232efdd",
-        "name": "después del ritual",
+        "name": "Después del ritual",
         "thumbnailUrl": "https://uigbpgrkzspdaisrdjvz.supabase.co/storage/v1/object/public/llama-assets/products/modulo-03-el-ritual/despues-del-ritual.png",
         "type": "link",
         "position": 5,
@@ -250,7 +250,7 @@
   },
   {
     "id": "e890ea7f-80d4-4a0f-8644-72d8dd037375",
-    "name": "Módulo 05 - Senales",
+    "name": "Módulo 05 - Señales",
     "thumbnailUrl": "https://uigbpgrkzspdaisrdjvz.supabase.co/storage/v1/object/public/llama-assets/modules/modulo-05-senales.png",
     "position": 5,
     "purchaseUrl": null,
@@ -346,7 +346,7 @@
       {
         "id": "1ad52dc4-f7fd-4b86-b1fa-f7480e8e0bbb",
         "moduleId": "562e3070-efc7-45da-bdaa-508425c19576",
-        "name": "Banhos Magnéticos de Atração y Reconexión",
+        "name": "Baños magnéticos de atracción y reconexión",
         "thumbnailUrl": "https://uigbpgrkzspdaisrdjvz.supabase.co/storage/v1/object/public/llama-assets/products/bonus-01/banhos-magneticos-de-atracao-y-reconexion.png",
         "type": "link",
         "position": 0,
@@ -388,7 +388,7 @@
       {
         "id": "adfa9d73-8f32-46eb-b0f5-e230d50e8960",
         "moduleId": "da2f02a0-dcfe-4f1c-bfad-4b3edc0d7459",
-        "name": "Como Aparecer nos Sonhos Dele",
+        "name": "Cómo aparecer en sus sueños",
         "thumbnailUrl": "https://uigbpgrkzspdaisrdjvz.supabase.co/storage/v1/object/public/llama-assets/products/bonus-03/como-aparecer-nos-sonhos-dele.png",
         "type": "link",
         "position": 0,
@@ -441,7 +441,7 @@
       {
         "id": "56a26710-6aa7-4797-acc1-373050a41045",
         "moduleId": "f7db8ee5-2755-4605-8489-009545cd8b54",
-        "name": "EN BREVE - 12 Señales que anuncian el regreso",
+        "name": "12 señales que anuncian el regreso",
         "thumbnailUrl": "https://uigbpgrkzspdaisrdjvz.supabase.co/storage/v1/object/public/llama-assets/products/carta-canalizada/en-breve-12-senales-que-anuncian-el-regreso.png",
         "type": "html",
         "position": 1,

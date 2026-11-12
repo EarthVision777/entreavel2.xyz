@@ -5,6 +5,7 @@ import { ChevronLeft, ChevronRight, Lock } from "lucide-react";
 import { LessonDialog } from "@/components/lesson-dialog";
 import { useApp, toast } from "@/components/app-provider";
 import { Spinner } from "@/components/spinner";
+import { guideFor, noteFor } from "@/data/guides";
 import { ApiError, api } from "@/lib/api";
 import { t } from "@/lib/i18n";
 import { openExternal, releaseMessage } from "@/lib/media";
@@ -71,32 +72,50 @@ export default function HomePage() {
           <button
             type="button"
             onClick={() => setOpened(null)}
-            className="mb-6 inline-flex items-center text-gray-400 hover:text-gray-200"
+            className="mb-4 inline-flex items-center rounded-full text-gray-300 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#e7b5a6]"
           >
             <ChevronLeft className="mr-1 h-5 w-5" />
             {t("back")}
           </button>
-          <div className="grid grid-cols-3 gap-3">
-            {opened.products.map((item) => (
-              <button
-                key={item.id}
-                type="button"
-                onClick={() => openProduct(item)}
-                className={`text-left ${loadingId === item.id ? "opacity-60" : ""}`}
-              >
-                <Thumb
-                  src={item.thumbnailUrl}
-                  name={item.name}
-                  rounded="rounded-2xl"
-                />
-                <h3
-                  className="mt-3 px-1 text-center text-sm font-medium break-words"
-                  style={{ color: config.productNameColor }}
+          <ModuleIntro
+            moduleId={opened.id}
+            count={opened.products.length}
+            dark={dark}
+          />
+          <div className="grid grid-cols-2 gap-3">
+            {opened.products.map((item, index) => {
+              const lead = guideFor(item.id)?.lead;
+              return (
+                <button
+                  key={item.id}
+                  type="button"
+                  onClick={() => openProduct(item)}
+                  className={`rounded-2xl text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#e7b5a6] ${loadingId === item.id ? "opacity-60" : ""}`}
                 >
-                  {item.name}
-                </h3>
-              </button>
-            ))}
+                  <div className="relative">
+                    <Thumb
+                      src={item.thumbnailUrl}
+                      name={item.name}
+                      rounded="rounded-2xl"
+                    />
+                    <span className="absolute top-2 left-2 flex h-7 w-7 items-center justify-center rounded-full bg-[#8a1500] text-xs font-semibold text-white">
+                      {index + 1}
+                    </span>
+                  </div>
+                  <h3
+                    className="mt-3 px-1 text-center text-sm leading-5 font-medium break-words"
+                    style={{ color: config.productNameColor }}
+                  >
+                    {item.name}
+                  </h3>
+                  {lead ? (
+                    <p className="mt-1 line-clamp-3 px-1 text-center text-xs leading-5 text-gray-400">
+                      {lead}
+                    </p>
+                  ) : null}
+                </button>
+              );
+            })}
           </div>
         </div>
       ) : (
@@ -110,7 +129,7 @@ export default function HomePage() {
                   key={module.id}
                   type="button"
                   onClick={() => openModule(module)}
-                  className={`overflow-hidden rounded-lg text-left shadow-sm transition hover:-translate-y-1 hover:shadow-md ${dark ? "border border-gray-700 bg-gray-800" : "bg-white"}`}
+                  className={`overflow-hidden rounded-lg text-left shadow-sm transition hover:-translate-y-1 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#e7b5a6] ${dark ? "border border-gray-700 bg-gray-800" : "bg-white"}`}
                 >
                   <div className="relative aspect-square">
                     <Thumb src={module.thumbnailUrl} name={module.name} />
@@ -124,13 +143,18 @@ export default function HomePage() {
                     ) : null}
                   </div>
                   {config.showProductName ? (
-                    <div className="p-2 text-center">
+                    <div className="p-3 text-center">
                       <h3
-                        className="text-sm font-medium break-words"
+                        className="text-sm leading-5 font-medium break-words"
                         style={{ color: config.productNameColor }}
                       >
                         {module.name}
                       </h3>
+                      {noteFor(module.id) ? (
+                        <p className="mt-1 line-clamp-2 text-xs leading-5 text-gray-400">
+                          {noteFor(module.id)?.summary}
+                        </p>
+                      ) : null}
                     </div>
                   ) : null}
                 </button>
@@ -150,6 +174,36 @@ export default function HomePage() {
         onClose={() => setProduct(null)}
       />
     </div>
+  );
+}
+
+function ModuleIntro({
+  moduleId,
+  count,
+  dark,
+}: {
+  moduleId: string;
+  count: number;
+  dark: boolean;
+}) {
+  const note = noteFor(moduleId);
+  if (!note) return null;
+  return (
+    <section
+      className={`mb-5 rounded-2xl border px-4 py-4 ${dark ? "border-white/10 bg-white/[0.04]" : "border-stone-200 bg-white"}`}
+    >
+      <p
+        className={`text-xs font-medium tracking-wide uppercase ${dark ? "text-[#f0c7b8]" : "text-[#8a1500]"}`}
+      >
+        {count === 1 ? "1 clase" : t("lessons_count", { count })}
+      </p>
+      <p className={`mt-2 text-base leading-7 ${dark ? "text-stone-100" : "text-stone-900"}`}>
+        {note.summary}
+      </p>
+      <p className={`mt-2 text-sm leading-6 ${dark ? "text-stone-400" : "text-stone-600"}`}>
+        {note.howToUse}
+      </p>
+    </section>
   );
 }
 
