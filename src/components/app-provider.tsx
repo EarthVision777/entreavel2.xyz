@@ -21,7 +21,7 @@ type AppContextValue = {
   user: SessionUser | null;
   isAuthenticated: boolean;
   loading: boolean;
-  login: (email: string) => Promise<void>;
+  login: () => Promise<void>;
   logout: () => void;
   setUser: (user: SessionUser) => void;
 };
@@ -69,15 +69,15 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     }
   }, []);
 
-  const login = useCallback(async (email: string) => {
-    setUserState(await api.login(email));
+  const login = useCallback(async () => {
+    setUserState(await api.login());
   }, []);
 
   const logout = useCallback(async () => {
     try {
       await api.logout();
     } catch {
-      // Clearing the screen still returns the visitor to the email form.
+      // The screen still returns to the entrance if the request fails.
     }
     setUserState(null);
   }, []);

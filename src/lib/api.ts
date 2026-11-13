@@ -43,10 +43,10 @@ async function request<T>(path: string, init: RequestInit = {}): Promise<T> {
 }
 
 export const api = {
-  login: (email: string) =>
+  login: () =>
     request<SessionUser>("/auth/login", {
       method: "POST",
-      body: JSON.stringify({ email }),
+      body: JSON.stringify({}),
     }),
   me: () => request<SessionUser>("/me"),
   logout: () => request<null>("/me", { method: "DELETE" }),

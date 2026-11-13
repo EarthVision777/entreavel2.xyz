@@ -2,12 +2,12 @@
 
 Área de membros do **Llama eterna**: módulos, aulas, feed, comunidade e perfil.
 
-As aulas continuam nas páginas originais e abrem dentro do app. Qualquer e-mail válido entra, e todo mundo vê o mesmo conteúdo. O e-mail só identifica o perfil de quem já está autenticado; não libera a conta de outra pessoa.
+As aulas continuam nas páginas originais e abrem dentro do app. A entrada não pede e-mail: a sessão abre com a pessoa já autenticada, e todo mundo vê o mesmo conteúdo.
 
 ## Como entrar
 
 1. Abra o app.
-2. Digite qualquer e-mail válido.
+2. A entrada segue sozinha, sem pedir e-mail.
 3. Os módulos, o feed e a comunidade abrem em seguida.
 
 No app publicado, quem entra é a pessoa autenticada no Cursor. Neste computador, o servidor simula um visitante de teste (`dev@example.com`) para as telas funcionarem sem essa autenticação.

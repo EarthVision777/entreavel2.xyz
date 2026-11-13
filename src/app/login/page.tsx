@@ -2,48 +2,40 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { Download, Mail } from "lucide-react";
+import { Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { useApp, toast } from "@/components/app-provider";
-import { ApiError } from "@/lib/api";
 import { t } from "@/lib/i18n";
 import { isIos, readableOn } from "@/lib/media";
 
 export default function LoginPage() {
   const { config, theme, login, isAuthenticated, loading } = useApp();
   const router = useRouter();
-  const [email, setEmail] = useState("");
-  const [submitting, setSubmitting] = useState(false);
   const [iosOpen, setIosOpen] = useState(false);
+  const [failed, setFailed] = useState(false);
   const dark = theme === "dark";
 
   useEffect(() => {
-    if (!loading && isAuthenticated) router.replace("/");
-  }, [loading, isAuthenticated, router]);
-
-  async function onSubmit(event: React.FormEvent) {
-    event.preventDefault();
-    if (!email.trim()) {
-      toast.error(t("please_enter_email"));
+    if (loading) return;
+    if (isAuthenticated) {
+      router.replace("/");
       return;
     }
-    setSubmitting(true);
-    try {
-      await login(email.trim());
-      router.replace("/");
-    } catch (error) {
-      const message =
-        error instanceof ApiError && error.status === 401
-          ? error.message
-          : error instanceof ApiError
-            ? error.message
-            : t("error_login");
-      toast.error(message);
-      setSubmitting(false);
-    }
-  }
+    let active = true;
+    login()
+      .then(() => {
+        if (active) router.replace("/");
+      })
+      .catch((error: unknown) => {
+        if (!active) return;
+        setFailed(true);
+        toast.error(error instanceof Error ? error.message : t("error_login"));
+      });
+    return () => {
+      active = false;
+    };
+  }, [loading, isAuthenticated, login, router]);
 
   const buttonColor = config.loginButtonColor;
   const buttonText = readableOn(buttonColor) ? "#ffffff" : "#111827";
@@ -55,66 +47,35 @@ export default function LoginPage() {
       <div
         className={`relative w-full max-w-md space-y-6 rounded-2xl p-8 shadow-xl backdrop-blur-lg ${dark ? "bg-gray-800/90" : "bg-white/80"}`}
       >
-        <form onSubmit={onSubmit} className="space-y-6">
-          {isIos() ? (
-            <div className="flex justify-center">
-              <Button
-                type="button"
-                onClick={() => setIosOpen(true)}
-                className="h-auto gap-2 px-4 py-2"
-                style={{ backgroundColor: buttonColor, color: buttonText }}
-              >
-                <Download />
-                {t("install_app")}
-              </Button>
-            </div>
-          ) : null}
-          <div className="mb-8 flex flex-col items-center space-y-4">
-            <img
-              src={config.logoUrl}
-              alt="Logo"
-              className="h-24 w-24 rounded-xl object-contain shadow-sm"
-            />
-            <h1
-              className="text-center text-2xl font-bold"
-              style={{ color: config.appNameColor }}
+        {isIos() ? (
+          <div className="flex justify-center">
+            <Button
+              type="button"
+              onClick={() => setIosOpen(true)}
+              className="h-auto gap-2 px-4 py-2"
+              style={{ backgroundColor: buttonColor, color: buttonText }}
             >
-              {config.name}
-            </h1>
-            <p className={dark ? "text-gray-300" : "text-gray-500"}>
-              {t("access_your_account")}
-            </p>
+              <Download />
+              {t("install_app")}
+            </Button>
           </div>
-          <div className="relative">
-            <Mail className="pointer-events-none absolute top-1/2 left-3 h-5 w-5 -translate-y-1/2 text-gray-400" />
-            <Input
-              type="email"
-              required
-              value={email}
-              onChange={(event) => setEmail(event.target.value)}
-              placeholder={t("enter_your_email")}
-              className={`h-11 pl-10 ${dark ? "border-gray-600 bg-gray-700/50 text-white placeholder:text-gray-500" : "bg-white/70"}`}
-            />
-          </div>
-          <Button
-            type="submit"
-            disabled={submitting}
-            className="h-auto w-full py-3 text-base"
-            style={{ backgroundColor: buttonColor, color: buttonText }}
+        ) : null}
+        <div className="flex flex-col items-center space-y-4">
+          <img
+            src={config.logoUrl}
+            alt="Logo"
+            className="h-24 w-24 rounded-xl object-contain shadow-sm"
+          />
+          <h1
+            className="text-center text-2xl font-bold"
+            style={{ color: config.appNameColor }}
           >
-            {submitting ? (
-              <span className="flex items-center justify-center gap-3">
-                <span className="h-5 w-5 animate-spin rounded-full border-b-2 border-current" />
-                {t("entering")}
-              </span>
-            ) : (
-              t("enter")
-            )}
-          </Button>
-          <p className={`text-center text-xs ${dark ? "text-gray-400" : "text-gray-500"}`}>
-            {t("login_hint")}
+            {config.name}
+          </h1>
+          <p className={dark ? "text-gray-300" : "text-gray-500"}>
+            {failed ? t("error_login") : t("entering")}
           </p>
-        </form>
+        </div>
       </div>
       <Dialog open={iosOpen} onOpenChange={setIosOpen}>
         <DialogContent className="max-w-[300px]">
