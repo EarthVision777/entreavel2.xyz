@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import {
   Bell,
   BellOff,
@@ -15,7 +15,6 @@ import {
 } from "lucide-react";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { useApp, toast } from "@/components/app-provider";
-import { Spinner } from "@/components/spinner";
 import { t } from "@/lib/i18n";
 import { isIos, readableOn } from "@/lib/media";
 
@@ -32,8 +31,7 @@ const nav = [
 ];
 
 export function AppShell({ children }: { children: React.ReactNode }) {
-  const { config, theme, user, isAuthenticated, loading } = useApp();
-  const router = useRouter();
+  const { config, theme, user } = useApp();
   const pathname = usePathname();
   const [installEvent, setInstallEvent] = useState<BeforeInstall | null>(null);
   const [installed, setInstalled] = useState(false);
@@ -66,10 +64,6 @@ export function AppShell({ children }: { children: React.ReactNode }) {
     };
   }, []);
 
-  useEffect(() => {
-    if (!loading && !isAuthenticated) router.replace("/login");
-  }, [loading, isAuthenticated, router]);
-
   const items = useMemo(
     () => nav.filter((item) => item.key !== "community" || config.communityEnabled),
     [config.communityEnabled],
@@ -77,10 +71,6 @@ export function AppShell({ children }: { children: React.ReactNode }) {
   const active =
     items.find((item) => item.href !== "/" && pathname.startsWith(item.href))
       ?.key ?? "home";
-
-  if (loading || !isAuthenticated || !user) {
-    return <Spinner dark={dark} />;
-  }
 
   const iconColor =
     dark && config.bottomButtonsColor === "#000000"
@@ -158,7 +148,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
       <main className="app-main mx-auto w-full max-w-lg px-4 pb-24">{children}</main>
       {config.showSupportButton ? (
         <a
-          href={`mailto:${config.supportEmail}?subject=${encodeURIComponent(`Soporte - ${config.name}`)}&body=${encodeURIComponent(`\n\n---\n${user.name ?? ""} <${user.email}>`)}`}
+          href={`mailto:${config.supportEmail}?subject=${encodeURIComponent(`Soporte - ${config.name}`)}&body=${encodeURIComponent(user ? `\n\n---\n${user.name ?? ""} <${user.email}>` : "")}`}
           aria-label="Soporte"
           className="fixed right-6 z-40 flex h-14 w-14 items-center justify-center overflow-hidden rounded-full bg-white shadow-lg transition-transform hover:scale-105"
           style={{ bottom: "calc(100px + var(--safe-bottom))" }}

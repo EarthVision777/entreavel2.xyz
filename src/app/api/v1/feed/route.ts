@@ -1,9 +1,7 @@
 import { sql } from "@/lib/db";
-import { ok, requireUser } from "@/lib/http";
+import { ok } from "@/lib/http";
 
-export async function GET(request: Request) {
-  const auth = await requireUser(request);
-  if (!auth.user) return auth.response;
+export async function GET() {
   const rows = await sql<{
     id: string;
     content: string;

@@ -100,7 +100,7 @@ export default function ProfilePage() {
             className="h-auto px-3 py-2 text-red-500 hover:bg-red-950/30 hover:text-red-400"
             onClick={() => {
               logout();
-              router.replace("/login");
+              router.replace("/");
             }}
           >
             <LogOut />
